@@ -1,0 +1,12 @@
+# Install torch FIRST, from the CUDA 12.8+ index — an RTX 5090 is sm_120 and
+# the default PyPI wheels do not carry that architecture:
+#
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+#
+# Then:
+numpy>=1.26
+pillow>=10.0
+tqdm>=4.66
+matplotlib>=3.8
+scipy>=1.11          # optional: paired Wilcoxon test in the results table
+# scikit-image is deliberately NOT required — SSIM is implemented in torch.
